@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevor Kipruto | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">TK<span>.</span></h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <main>
+        <section id="home" class="hero">
+
+            <div class="hero-text">
+                <p class="eyebrow">SOFTWARE DEVELOPMENT STUDENT</p>
+
+                <h1>Hello, I'm
+                    <span>Trevor Kipruto</span>
+                </h1>
+
+                <p>
+                    I am a passionate software developer with
+                    experience in creating web applications
+                    and solving complex problems.
+                </p>
+
+                <a href="#projects" class="button">
+                    Explore My Work
+                </a>
+            </div>
+
+            <!-- PROFILE PHOTO -->
+            <div class="photo-wrap">
+                <img src="images/trev.jpeg"
+                     alt="Trevor Kipruto"
+                     class="profile-photo">
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section section-soft">
+
+            <h2>About Me</h2>
+
+            <p>
+                My name is Trevor Kipruto. I am a student
+                at KCA University pursuing Software Development.
+                I enjoy learning technology and creating
+                solutions through programming.
+            </p>
+
+            <h3>Education</h3>
+
+            <table>
+                <tr>
+                    <th>Institution</th>
+                    <td>KCA University</td>
+                </tr>
+
+                <tr>
+                    <th>Course</th>
+                    <td>Software Development</td>
+                </tr>
+
+                <tr>
+                    <th>Year</th>
+                    <td>2026</td>
+                </tr>
+            </table>
+
+            <h3>My Interests</h3>
+
+            <ul>
+                <li>Playing chess</li>
+                <li>Swimming</li>
+                <li>Playing football</li>
+                <li>Open-source projects</li>
+                <li>Coding challenges</li>
+            </ul>
+
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section">
+
+            <h2>My Skills</h2>
+
+            <p>Some of my technical skills include:</p>
+
+            <div class="skill-grid">
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Problem Solving</div>
+            </div>
+
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section section-soft">
+
+            <h2>My Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>
+                        A responsive website that introduces
+                        my background, skills and interests.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Python Practice Projects</h3>
+                    <p>
+                        Small Python exercises designed
+                        to improve my programming skills.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Open-source Contributions</h3>
+                    <p>
+                        Exploring public coding projects
+                        and learning how to contribute.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                You can contact me through my email:
+            </p>
+
+            <p>
+                <a href="mailto:2607185@students.kcau.ac.ke">
+                    2607185@students.kcau.ac.ke
+                </a>
+            </p>
+
+            <form id="contactForm">
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message"
+                          placeholder="Write your message"
+                          required></textarea>
+
+                <button type="submit" class="button">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Trevor Kipruto.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const subject = encodeURIComponent(
+                "Portfolio message from " + name
+            );
+
+            const body = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\n" + message
+            );
+
+            window.location.href =
+                "mailto:2607185@students.kcau.ac.ke?subject="
+                + subject + "&body=" + body;
+        });
+    </script>
+
+</body>
+</html>

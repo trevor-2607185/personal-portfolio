@@ -1,0 +1,302 @@
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #263449;
+    background-color: white;
+}
+
+/* HEADER AND NAVIGATION */
+
+header {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    color: #102b50;
+    font-size: 28px;
+}
+
+.logo span {
+    color: #1769e0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #263449;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1769e0;
+}
+
+/* HOME SECTION */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 8%;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: #1769e0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    color: #102b50;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #1769e0;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* PROFILE PHOTO */
+
+.photo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 290px;
+    height: 290px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
+    border: 7px solid white;
+    outline: 5px solid #dceaff;
+    box-shadow: 0 16px 40px rgba(16, 43, 80, 0.16);
+}
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    background-color: #1769e0;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #102b50;
+    transform: translateY(-2px);
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 70px 8%;
+}
+
+.section-soft {
+    background-color: #f2f7ff;
+}
+
+h2 {
+    color: #102b50;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #102b50;
+    margin: 20px 0 10px;
+}
+
+/* EDUCATION TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dceaff;
+    text-align: left;
+}
+
+th {
+    background-color: #e4efff;
+}
+
+/* INTERESTS */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* SKILLS */
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.skill-card {
+    background-color: #f2f7ff;
+    color: #102b50;
+    padding: 22px;
+    text-align: center;
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    background-color: #dceaff;
+    transform: translateY(-5px);
+}
+
+/* PROJECTS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #dceaff;
+    box-shadow: 0 5px 15px rgba(16, 43, 80, 0.06);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTACT FORM */
+
+form {
+    max-width: 550px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #cbd7e7;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #a9caff;
+    border-color: #1769e0;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #102b50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 760px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 230px;
+        height: 230px;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
